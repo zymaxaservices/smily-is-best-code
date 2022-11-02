@@ -8,8 +8,8 @@ app.get('/', (req, res) => {
   res.send('CloudFlare ByPass Proxy')
 })
 
-app.get('/get/:url', (req, res) => {
-  cloudscraper.get(req.params.url).then(function (html) {
+app.get('/get', (req, res) => {
+  cloudscraper.get(req.query.url).then(function (html) {
   	res.send(html)
   })
 })
