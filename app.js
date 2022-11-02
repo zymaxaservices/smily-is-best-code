@@ -5,7 +5,7 @@ const app = express()
 const port = 3000
 
 app.get('/', (req, res) => {
-  res.send('CloudFlare ByPass Proxy')
+  res.send('Smily App is Best')
 })
 
 app.get('/get', (req, res) => {
