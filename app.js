@@ -9,9 +9,13 @@ app.get('/', (req, res) => {
 })
 
 app.get('/get', (req, res) => {
+  if(req.query.url){
   cloudscraper.get(req.query.url).then(function (html) {
   	res.send(html)
   })
+  }else{
+   res.send("Smily App is Best :: Get")
+  }
 })
 
 app.listen(port, () => {
